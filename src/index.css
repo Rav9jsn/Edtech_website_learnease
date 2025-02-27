@@ -3,7 +3,10 @@
 
 @theme {
   --font-sans: "Poppins", sans-serif;
+  --color-primary: #afd275;
+  --color-secondry: #2f4021;
   --breakpoint-tb: 77rem;
+  --breakpoint-st: 1rem;
 }
 
 body {
@@ -14,6 +17,9 @@ a.active {
   color: #afd275;
 }
 
+div ul ul li:hover {
+  color: white;
+}
 /* @theme {
   --color-cake: #2fcf51;
   --spacing-72: 18rem;
