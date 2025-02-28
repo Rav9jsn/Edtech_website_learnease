@@ -15,11 +15,8 @@ const Navbar = () => {
   const [removenav, setRemovenav] = useState(false);
   return (
     <>
-      <div
-        onMouseLeave={() => setSubcourse(false)}
-        className="sticky bg-white top-0 "
-      >
-        <div className="flex bg-white justify-between items-center p-[2vw]">
+      <div onMouseLeave={() => setSubcourse(false)}>
+        <div className="flex bg-white  justify-between items-center p-[2vw]">
           <img
             src={Logo}
             alt="Logo"
@@ -59,17 +56,19 @@ const Navbar = () => {
                     onClick={() =>
                       subcourse ? setSubcourse(false) : setSubcourse(true)
                     }
-                    className="text-[12px] inline pb-0.5"
+                    className="text-[12px]  inline pb-0.5"
                   />
                 </li>
               </Link>
               {subcourse && (
                 <ul className="bg-[#AFD275] absolute  top-[50px] left-[200px] p-[20px] text-me rounded-2xl text-[#37472b] text-[16px] ">
                   <Link to={"/Coursescatalog"}>
-                    <li className="hover:text-white">Courses Catalog</li>
+                    <li className="hover:text-white relative ">
+                      Courses Catalog
+                    </li>
                   </Link>
                   <Link to={"/Coursedetails"}>
-                    <li className="hover:text-white">Courses Detail</li>
+                    <li className="hover:text-white ">Courses Detail</li>
                   </Link>
                 </ul>
               )}

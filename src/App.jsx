@@ -12,7 +12,7 @@ import CourseDetails from "./Components/Navbar/CourseDetails";
 const App = () => {
   return (
     <Router>
-      <div className="px-[2vw]">
+      <div className="sticky top-0 bg-white z-[1000] px-[2vw]">
         <Navbar />
       </div>
       <Routes>
