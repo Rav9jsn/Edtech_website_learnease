@@ -5,15 +5,24 @@ import pic3 from "../../assets/reviewphoto/pic3.jpeg";
 import pic4 from "../../assets/reviewphoto/pic4.jpg";
 import pic5 from "../../assets/reviewphoto/pic5.jpg";
 import pic6 from "../../assets/reviewphoto/pic6.jpeg";
-import bgHero from "../../assets/hi.png";
+import { FaDraftingCompass } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
 import { CgNotes } from "react-icons/cg";
+import { FaDigitalOcean } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { FaDatabase } from "react-icons/fa";
+import { FaWallet } from "react-icons/fa6";
+import { FaDev } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { IoIosPeople } from "react-icons/io";
 
 const Home = () => {
+  const uptonav = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const count = useMotionValue(0);
   const rounded = useTransform(() => Math.round(count.get()));
   useEffect(() => {
@@ -49,7 +58,12 @@ const Home = () => {
           <div className="flex flex-col text-[#2F4021] sm:font-[700] font-[800] md:text-[70px] sm:text-[50px] text-[35px] md:leading-20 sm:leading-15 leading-10 ">
             <p>Unlock Your Future</p>
             <p>with</p>
-            <p>Online Learning</p>
+            <p
+              className="hover:border-b-6  duration-800  hover:border-[#AFD275]  tb:animate-bounce
+"
+            >
+              Online Learning
+            </p>
           </div>
           <p className="text-[#2F4021] bg-white rounded-3xl   text-start text-[19px]">
             Discover a wide range of expert-led courses tailored to your
@@ -173,6 +187,90 @@ const Home = () => {
             />
           </div>
         </div>{" "}
+      </div>
+      <div className="px-[4vw] sm:pt-36 pt-14 w-[100%]">
+        <div className="flex items-center  gap-[1rem] flex-col">
+          <p className="bg-secondry  text-center font-semibold py-[3px] w-[10rem] rounded-2xl text-primary">
+            Top Categories
+          </p>
+          <h1 className="text-secondry text-center md:text-[55px] text-[35px] font-bold">
+            Browse Course With Top Categories
+          </h1>
+          <div className="mt-[25px] grid gap-[1.5rem] md:grid-cols-2 grid-cols-1 lg:grid-cols-3 tb:grid-cols-4 md:grid-rows-2">
+            <div className="flex gap-4 items-center   bg-[#F7F8F5] rounded-2xl p-5">
+              <FaDraftingCompass className="bg-primary text-secondry text-6xl rounded-lg p-4" />
+              <div className="flex gap-[6px] flex-col">
+                <p className="font-semibold text-secondry ">
+                  Creative Design & Media
+                </p>
+                <p className="text-[#B3B4B6] font-semibold">
+                  Unleash Your Creative Potential
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center   bg-[#F7F8F5] rounded-2xl p-5">
+              <FaDigitalOcean className="bg-secondry text-primary text-6xl rounded-lg p-4" />
+              <div className="flex gap-[6px] flex-col">
+                <p className="font-semibold text-secondry ">
+                  Creative Design & Media
+                </p>
+                <p className="text-[#B3B4B6] font-semibold">
+                  Unleash Your Creative Potential
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center   bg-[#F7F8F5] rounded-2xl p-5">
+              <FaPython className="bg-primary text-secondry text-6xl rounded-lg p-4" />
+              <div className="flex gap-[6px] flex-col">
+                <p className="font-semibold text-secondry ">
+                  Creative Design & Media
+                </p>
+                <p className="text-[#B3B4B6] font-semibold">
+                  Unleash Your Creative Potential
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center   bg-[#F7F8F5] rounded-2xl p-5">
+              <FaDatabase className="bg-secondry text-primary text-6xl rounded-lg p-4" />
+              <div className="flex gap-[6px] flex-col">
+                <p className="font-semibold text-secondry ">
+                  Creative Design & Media
+                </p>
+                <p className="text-[#B3B4B6] font-semibold">
+                  Unleash Your Creative Potential
+                </p>
+              </div>
+            </div>
+            <div className="flex tb:col-start-2 tb:col-end-3 gap-4 items-center   bg-[#F7F8F5] rounded-2xl p-5">
+              <FaWallet className="bg-primary text-secondry text-6xl rounded-lg p-4" />
+              <div className="flex gap-[6px] flex-col">
+                <p className="font-semibold text-secondry ">
+                  Creative Design & Media
+                </p>
+                <p className="text-[#B3B4B6] font-semibold">
+                  Unleash Your Creative Potential
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center   bg-[#F7F8F5] rounded-2xl p-5">
+              <FaDev className="bg-secondry text-primary text-6xl rounded-lg p-4" />
+              <div className="flex gap-[6px] flex-col">
+                <p className="font-semibold text-secondry ">
+                  Creative Design & Media
+                </p>
+                <p className="text-[#B3B4B6] font-semibold">
+                  Unleash Your Creative Potential
+                </p>
+              </div>
+            </div>
+          </div>
+          <p
+            onClick={() => uptonav()}
+            className="hover:bg-secondry mt-[35px] cursor-pointer  bg-primary text-center font-semibold py-[13px] w-[12rem] rounded-2xl hover:text-primary text-secondary"
+          >
+            Explore Category
+          </p>
+        </div>
       </div>
     </>
   );
