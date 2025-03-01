@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Components/Navbar/Home";
-import About from "./Components/Navbar/About";
-import Pages from "./Components/Navbar/Pages";
-import News from "./Components/Navbar/News";
-import ContactUs from "./Components/Navbar/ContactUs";
-import Coursescatalog from "./Components/Navbar/Coursescatalog";
-import CourseDetails from "./Components/Navbar/CourseDetails";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Pages from "./Components/Pages";
+import News from "./Components/News";
+import ContactUs from "./Components/ContactUs";
+import Coursescatalog from "./Components/Coursescatalog";
+import CourseDetails from "./Components/CourseDetails";
 
 const App = () => {
   return (

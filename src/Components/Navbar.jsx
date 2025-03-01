@@ -3,8 +3,8 @@ import { FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
-import Logo from "../../assets/Logo.png";
-import Shlogo from "../../assets/Shlogo.png";
+import Logo from "../assets/Logo.png";
+import Shlogo from "../assets/Shlogo.png";
 import { useState } from "react";
 import Mobilenavbar from "./Mobilenavbar";
 

@@ -1,10 +1,10 @@
 import React from "react";
-import pic1 from "../../assets/reviewphoto/pic1.jpeg";
-import pic2 from "../../assets/reviewphoto/pic2.jpg";
-import pic3 from "../../assets/reviewphoto/pic3.jpeg";
-import pic4 from "../../assets/reviewphoto/pic4.jpg";
-import pic5 from "../../assets/reviewphoto/pic5.jpg";
-import pic6 from "../../assets/reviewphoto/pic6.jpeg";
+import pic1 from "../assets/reviewphoto/pic1.jpeg";
+import pic2 from "../assets/reviewphoto/pic2.jpg";
+import pic3 from "../assets/reviewphoto/pic3.jpeg";
+import pic4 from "../assets/reviewphoto/pic4.jpg";
+import pic5 from "../assets/reviewphoto/pic5.jpg";
+import pic6 from "../assets/reviewphoto/pic6.jpeg";
 import { CiCircleCheck } from "react-icons/ci";
 import { FaDraftingCompass } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
@@ -21,7 +21,7 @@ import { GrCertificate } from "react-icons/gr";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { IoIosPeople } from "react-icons/io";
-import data from "../../assets/index.js";
+import data from "../assets/index.js";
 
 const Home = () => {
   const uptonav = () => {
