@@ -340,7 +340,7 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="flex gap-4 fle">
+      {/* <div className="flex gap-4 fle">
         {data.map((d, i) => (
           <div
             className="flex flex-col p-[20px] gap-[1rem] border-[1px] rounded-2xl border-primary hover:border-black duration-500 "
@@ -382,7 +382,7 @@ const Home = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
