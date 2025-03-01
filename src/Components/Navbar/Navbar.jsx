@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 import Logo from "../../assets/Logo.png";
-import ShLogo from "../../assets/ShLogo.png";
+import Shlogo from "../../assets/Shlogo.png";
 import { useState } from "react";
 import Mobilenavbar from "./Mobilenavbar";
 
@@ -23,7 +23,7 @@ const Navbar = () => {
             className="w-[250px] cursor-pointer md:block st:hidden "
           />
           <img
-            src={ShLogo}
+            src={Shlogo}
             alt="Logo"
             className="w-[45px] cursor-pointer md:hidden st:block "
           />
