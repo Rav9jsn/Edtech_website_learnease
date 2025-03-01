@@ -5,8 +5,12 @@ import pic3 from "../../assets/reviewphoto/pic3.jpeg";
 import pic4 from "../../assets/reviewphoto/pic4.jpg";
 import pic5 from "../../assets/reviewphoto/pic5.jpg";
 import pic6 from "../../assets/reviewphoto/pic6.jpeg";
+import { CiCircleCheck } from "react-icons/ci";
 import { FaDraftingCompass } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
+import { FaArrowPointer } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa";
+import { IoPersonSharp } from "react-icons/io5";
 import { CgNotes } from "react-icons/cg";
 import { FaDigitalOcean } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
@@ -17,6 +21,7 @@ import { GrCertificate } from "react-icons/gr";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { IoIosPeople } from "react-icons/io";
+import data from "../../assets/index.js";
 
 const Home = () => {
   const uptonav = () => {
@@ -271,6 +276,112 @@ const Home = () => {
             Explore Category
           </p>
         </div>
+      </div>
+
+      <div className="px-[4vw] bg-[#2f4021f6] flex flex-col mt-10 gap-[1rem] py-[10vh] items-center  bg-[url('https://theme.vividusmockup.com/learnease/wp-content/uploads/sites/3/2024/10/bg.png')] ">
+        <p className="text-center px-2 py-[3px] w-[8.3rem] rounded-2xl text-secondry bg-primary font-semibold">
+          How It Works
+        </p>
+        <p className="text-[33px] text-center font-semibold text-[#F8F9F5]  ">
+          Experience Interactive Learning
+        </p>
+        <p className="text-primary md:w-[39vw] w-[70vw] text-[1.2rem] font-medium text-center ">
+          Discover a wide range of expert-led courses tailored to your personal
+          and professional growth.
+        </p>
+        <div className=" sm:py-[10vh] w-[80vw] lg:flex-nowrap flex-wrap flex gap-7 ">
+          <div className="flex p-[30px] gap-[0.5rem] rounded-2xl  border-dotted border-primary border-[2px] flex-col">
+            <div className="pb-3  flex  justify-between">
+              <p className=" text-6xl text-primary  font-semibold">01</p>
+              <IoPersonSharp className="text-secondry bg-primary text-6xl p-3 rounded-lg" />
+            </div>
+            <p className="text-primary text-3xl font-semibold">Sign Up</p>
+            <p className="text-[1.2rem] font-medium text-[#F8F9F5]">
+              Create an account in minutes by providing your details and
+              accessing the student dashboard.
+            </p>
+          </div>
+          <div className="flex p-[30px] lg:relative st:w-[100%] tb:w-[70%] lg:w-[95%] lg:top-[6rem] gap-[0.5rem] rounded-2xl border-dotted border-primary border-[2px] flex-col">
+            <div className="pb-3 flex  justify-between">
+              <p className=" text-6xl text-primary  font-semibold">02</p>
+              <FaArrowPointer className="text-secondry bg-primary text-6xl p-3 rounded-lg" />
+            </div>
+            <p className="text-primary text-3xl font-semibold">
+              Select a Course
+            </p>
+            <p className="text-[1.2rem] font-medium text-[#F8F9F5]">
+              Browse our wide range of courses, choose your preferred subject,
+              and enroll instantly.
+            </p>
+          </div>
+          <div className="flex p-[30px] gap-[0.5rem] rounded-2xl border-dotted border-primary border-[2px] flex-col">
+            <div className="pb-3 flex  justify-between">
+              <p className=" text-6xl text-primary  font-semibold">03</p>
+              <FaCheck className="text-secondry bg-primary text-6xl p-3 rounded-lg" />
+            </div>
+            <p className="text-primary text-3xl font-semibold">
+              Start Learning
+            </p>
+            <p className="text-[1.2rem] font-medium text-[#F8F9F5]">
+              Access course materials, join interactive lessons, and complete
+              assignments at your own pace.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex gap-[1rem] my-[5rem] items-center flex-col px-[4vw]">
+        <p className="text-6xl font-bold text-secondry">Our Popular Courses</p>
+        <button
+          onClick={() => uptonav()}
+          className="cursor-pointer  rounded-2xl font-semibold py-3 px-[2rem] bg-primary hover:bg-secondry text-secondry hover:text-primary"
+        >
+          Explore Course
+        </button>
+      </div>
+
+      <div className="flex gap-4 fle">
+        {data.map((d, i) => (
+          <div
+            className="flex flex-col p-[20px] gap-[1rem] border-[1px] rounded-2xl border-primary hover:border-black duration-500 "
+            key={i}
+          >
+            {" "}
+            <div className="relative ">
+              <img
+                src={d.logoPic}
+                className="inline-block w-[294px] rounded-md h-[250px]"
+                alt=""
+              />
+
+              <span className=" top-8 left-52 absolute text-[0.86rem] inline-block text-white bg-red-400 font-semibold px-[7px] py-[3px]  rounded-2xl">
+                {d.textOnImage}
+              </span>
+            </div>
+            <div className=" flex justify-start gap-3  items-center ">
+              <CiCircleCheck className="text-primary text-2xl" />
+              <p className="text-secondry text-[1.15rem] font-semibold">
+                {d.courseDetails}
+              </p>
+            </div>
+            <p className="text-start mb-1 text-2xl font-semibold text-secondry ">
+              {d.title}
+            </p>
+            <p className="border-b-[2px] border-dashed border-secondry"></p>
+            <div className="flex items-center gap-[1rem]">
+              <img src={d.person} className="rounded-full  w-[50px]" alt="" />
+              <p className="text-[#314224] capitalize font-semibold ">
+                {d.name}
+              </p>
+              <p
+                onClick={() => uptonav()}
+                className="cursor-pointer bg-primary text-[#F8F9F5] rounded-4xl px-[15px] py-2"
+              >
+                View Course
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );
