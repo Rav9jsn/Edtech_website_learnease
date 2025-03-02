@@ -5,6 +5,7 @@ import pic3 from "../assets/reviewphoto/pic3.jpeg";
 import pic4 from "../assets/reviewphoto/pic4.jpg";
 import pic5 from "../assets/reviewphoto/pic5.jpg";
 import pic6 from "../assets/reviewphoto/pic6.jpeg";
+import grouppic from "../assets/reviewphoto/grouppic.jpg";
 import { CiCircleCheck } from "react-icons/ci";
 import { FaDraftingCompass } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
@@ -60,7 +61,7 @@ const Home = () => {
     <>
       <div className=" overflow-x-hidden backdrop-blur-2xl bg-[url('https://theme.vividusmockup.com/learnease/wp-content/uploads/sites/3/2024/10/bg.png')] bg-cover relative sm:gap-[3rem] gap-[3rem]  text-white  flex flex-col sm:flex-row   px-[4vw] lg:mt-[100px] w-[100%]">
         <div className="flex flex-col justify-start gap-[1.8rem] w-[100%] sm:max-w-[48%]">
-          <div className="flex flex-col text-[#2F4021] sm:font-[700] font-[800] md:text-[70px] sm:text-[50px] text-[35px] md:leading-20 sm:leading-15 leading-10 ">
+          <div className="flex flex-col text-[#2F4021] sm:font-[700] font-[900] md:text-[70px] sm:text-[50px] text-[45px] md:leading-20 sm:leading-15 leading-10 ">
             <p>Unlock Your Future</p>
             <p>with</p>
             <p
@@ -331,7 +332,9 @@ const Home = () => {
       </div>
 
       <div className="flex gap-[1rem] my-[5rem] items-center flex-col px-[4vw]">
-        <p className="text-6xl font-bold text-secondry">Our Popular Courses</p>
+        <p className="md:text-6xl text-4xl text-center font-bold text-secondry">
+          Our Popular Courses
+        </p>
         <button
           onClick={() => uptonav()}
           className="cursor-pointer  rounded-2xl font-semibold py-3 px-[2rem] bg-primary hover:bg-secondry text-secondry hover:text-primary"
@@ -339,50 +342,174 @@ const Home = () => {
           Explore Course
         </button>
       </div>
+      <div className="flex hidden flex-col">
+        <div className="flex overflow-hidden px-[4vw] gap-4 fle">
+          {data.map((d, i) => (
+            <div
+              className="flex flex-col p-[18px] bg-gradient-to-r from-stone-100 to-lime-50  gap-[1rem] border-[1px] rounded-2xl border-primary hover:border-black duration-500 "
+              key={i}
+            >
+              {" "}
+              <div className="relative ">
+                <img
+                  src={d.logoPic}
+                  className="inline-block w-[295px]  rounded-md h-[250px]"
+                  alt=""
+                />
 
-      {/* <div className="flex gap-4 fle">
-        {data.map((d, i) => (
-          <div
-            className="flex flex-col p-[20px] gap-[1rem] border-[1px] rounded-2xl border-primary hover:border-black duration-500 "
-            key={i}
-          >
-            {" "}
-            <div className="relative ">
-              <img
-                src={d.logoPic}
-                className="inline-block w-[294px] rounded-md h-[250px]"
-                alt=""
-              />
+                <span className=" top-6 right-10 absolute text-[0.86rem] inline-block text-white bg-red-400 font-semibold px-[7px] py-[3px]  rounded-2xl">
+                  {d.textOnImage}
+                </span>
+              </div>
+              <div className=" flex justify-start gap-3  items-center ">
+                <CiCircleCheck className="text-primary font-[900] text-2xl" />
+                <p className="text-secondry  text-[1.15rem] font-semibold">
+                  {d.courseDetails}
+                </p>
+              </div>
+              <p className="text-start mb-1 w-[295px] text-2xl font-semibold text-secondry ">
+                {d.title}
+              </p>
+              <p className="border-b-[2px] border-dashed border-secondry"></p>
+              <div className="flex items-center gap-[1rem]">
+                <img src={d.person} className="rounded-full  w-[50px]" alt="" />
+                <p className="text-[#314224] capitalize font-semibold ">
+                  {d.name}
+                </p>
+                <p
+                  onClick={() => uptonav()}
+                  className="cursor-pointer bg-primary text-[#F8F9F5] rounded-4xl px-[15px] py-2"
+                >
+                  View Course
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-              <span className=" top-8 left-52 absolute text-[0.86rem] inline-block text-white bg-red-400 font-semibold px-[7px] py-[3px]  rounded-2xl">
-                {d.textOnImage}
-              </span>
+        <div className="flex px-[4vw] py-7 justify-center gap-[1rem]  ">
+          <input
+            type="radio"
+            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
+          ></input>
+          <input
+            type="radio"
+            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
+          ></input>
+          <input
+            type="radio"
+            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
+          ></input>
+          <input
+            type="radio"
+            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
+          ></input>
+          <input
+            type="radio"
+            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
+          ></input>
+          <input
+            type="radio"
+            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
+          ></input>
+        </div>
+      </div>
+
+      {/* part 6 */}
+      <div className="tb:px-0 flex  mt-7">
+        <div className="relative overflow-hidden max-w-[40%]">
+          <img
+            src={grouppic}
+            className="transform scale-[1.5]  origin-center  "
+            alt=""
+          />
+          <div className="bg-[#2f402151] top-0  bg-cover py-[33%] px-[50%] absolute"></div>
+        </div>
+        <div className="max-w-[60%]  p-[5rem] bg-secondry flex flex-col gap-[2rem] justify-between ">
+          <div>
+            <span className=" bg-primary text-secondry rounded-2xl py-[8px] font-semibold px-[10px]">
+              Which Services We Provide
+            </span>
+          </div>
+          <p className="text-[50px] leading-15  font-semibold text-[#F8F9F5]">
+            Learn More Skills , Be More Competitive
+          </p>
+          <div className="grid gap-[4rem] grid-cols-2">
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">
+                  Trusted by Millions
+                </p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Join a community of millions who trust us for their learning
+                  journey.
+                </p>
+              </div>
             </div>
-            <div className=" flex justify-start gap-3  items-center ">
-              <CiCircleCheck className="text-primary text-2xl" />
-              <p className="text-secondry text-[1.15rem] font-semibold">
-                {d.courseDetails}
-              </p>
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">
+                  Trusted by Millions
+                </p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Join a community of millions who trust us for their learning
+                  journey.
+                </p>
+              </div>
             </div>
-            <p className="text-start mb-1 text-2xl font-semibold text-secondry ">
-              {d.title}
-            </p>
-            <p className="border-b-[2px] border-dashed border-secondry"></p>
-            <div className="flex items-center gap-[1rem]">
-              <img src={d.person} className="rounded-full  w-[50px]" alt="" />
-              <p className="text-[#314224] capitalize font-semibold ">
-                {d.name}
-              </p>
-              <p
-                onClick={() => uptonav()}
-                className="cursor-pointer bg-primary text-[#F8F9F5] rounded-4xl px-[15px] py-2"
-              >
-                View Course
-              </p>
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">
+                  Trusted by Millions
+                </p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Join a community of millions who trust us for their learning
+                  journey.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">
+                  Trusted by Millions
+                </p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Join a community of millions who trust us for their learning
+                  journey.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">
+                  Trusted by Millions
+                </p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Join a community of millions who trust us for their learning
+                  journey.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">
+                  Trusted by Millions
+                </p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Join a community of millions who trust us for their learning
+                  journey.
+                </p>
+              </div>
             </div>
           </div>
-        ))}
-      </div> */}
+        </div>
+      </div>
     </>
   );
 };

@@ -19,7 +19,7 @@ const Mobilenavbar = ({
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.1 }} // Animation duration of 1 second
+          transition={{ duration: 0.4 }} // Animation duration of 1 second
           className=" absolute w-[100%] lg:hidden block rounded-3xl md:mt-[48px] bg-[#AFD275] "
         >
           {" "}
