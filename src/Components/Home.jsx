@@ -32,28 +32,28 @@ const Home = () => {
   const count = useMotionValue(0);
   const rounded = useTransform(() => Math.round(count.get()));
   useEffect(() => {
-    const controls = animate(count, 1027, { duration: 1 });
+    const controls = animate(count, 1027, { duration: 1.5 });
     return () => controls.stop();
   }, []);
 
   const count2 = useMotionValue(0);
   const rounded2 = useTransform(() => Math.round(count2.get()));
   useEffect(() => {
-    const controls = animate(count2, 105, { duration: 1 });
+    const controls = animate(count2, 105, { duration: 1.5 });
     return () => controls.stop();
   }, []);
 
   const count3 = useMotionValue(0);
   const rounded3 = useTransform(() => Math.round(count3.get()));
   useEffect(() => {
-    const controls = animate(count3, 587, { duration: 1 });
+    const controls = animate(count3, 587, { duration: 1.5 });
     return () => controls.stop();
   }, []);
 
   const count4 = useMotionValue(0);
   const rounded4 = useTransform(() => Math.round(count4.get()));
   useEffect(() => {
-    const controls = animate(count4, 347, { duration: 1 });
+    const controls = animate(count4, 347, { duration: 1.5 });
     return () => controls.stop();
   }, []);
 
@@ -416,8 +416,8 @@ const Home = () => {
       </div>
 
       {/* part 6 */}
-      <div className="tb:px-0 flex  mt-7">
-        <div className="relative overflow-hidden max-w-[40%]">
+      <div className="tb:px-0 flex-wrap flex  mt-7">
+        <div className="relative hidden md:block overflow-hidden max-w-[40%]">
           <img
             src={grouppic}
             className="transform scale-[1.5]  origin-center  "
@@ -425,16 +425,16 @@ const Home = () => {
           />
           <div className="bg-[#2f402151] top-0  bg-cover py-[33%] px-[50%] absolute"></div>
         </div>
-        <div className="max-w-[60%]  p-[5rem] bg-secondry flex flex-col gap-[2rem] justify-between ">
-          <div>
-            <span className=" bg-primary text-secondry rounded-2xl py-[8px] font-semibold px-[10px]">
+        <div className="md:max-w-[60%] w-[100%]  p-[5rem] bg-secondry flex flex-col gap-[2rem] justify-between ">
+          <div className="text-center">
+            <span className=" bg-primary  sm:text-[1rem]  text-secondry md:text-left text-center rounded-2xl py-[8px] font-semibold sm:px-[10px]">
               Which Services We Provide
             </span>
           </div>
-          <p className="text-[50px] leading-15  font-semibold text-[#F8F9F5]">
+          <p className="md:text-[50px] text-[30px] md:leading-15  leading-12 font-semibold text-[#F8F9F5]">
             Learn More Skills , Be More Competitive
           </p>
-          <div className="grid gap-[4rem] grid-cols-2">
+          <div className="grid gap-[4rem] lg:grid-cols-2 grid-cols-1">
             <div className="flex gap-[1rem] ">
               <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
               <div className="flex justify-between flex-col">
