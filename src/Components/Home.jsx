@@ -278,7 +278,6 @@ const Home = () => {
           </p>
         </div>
       </div>
-
       <div className="px-[4vw] bg-[#2f4021f6] flex flex-col mt-10 gap-[1rem] py-[10vh] items-center  bg-[url('https://theme.vividusmockup.com/learnease/wp-content/uploads/sites/3/2024/10/bg.png')] ">
         <p className="text-center px-2 py-[3px] w-[8.3rem] rounded-2xl text-secondry bg-primary font-semibold">
           How It Works
@@ -330,7 +329,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <div className="flex gap-[1rem] my-[5rem] items-center flex-col px-[4vw]">
         <p className="md:text-6xl text-4xl text-center font-bold text-secondry">
           Our Popular Courses
@@ -414,7 +412,6 @@ const Home = () => {
           ></input>
         </div>
       </div>
-
       {/* part 6 */}
       <div className="tb:px-0 flex-wrap flex  mt-7">
         <div className="relative hidden md:block overflow-hidden max-w-[40%]">
@@ -451,11 +448,11 @@ const Home = () => {
               <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
-                  Trusted by Millions
+                  Certificate Awarded
                 </p>
                 <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
-                  Join a community of millions who trust us for their learning
-                  journey.
+                  Earn recognized certificates to enhance your credentials and
+                  career prospects.
                 </p>
               </div>
             </div>
@@ -463,11 +460,11 @@ const Home = () => {
               <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
-                  Trusted by Millions
+                  Made by Professionals
                 </p>
                 <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
-                  Join a community of millions who trust us for their learning
-                  journey.
+                  Learn from industry experts dedicated to delivering
+                  high-quality educational content.
                 </p>
               </div>
             </div>
@@ -475,11 +472,21 @@ const Home = () => {
               <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
-                  Trusted by Millions
+                  24/7 Support & Community
                 </p>
                 <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
-                  Join a community of millions who trust us for their learning
-                  journey.
+                  Get instant support anytime with our round-the-clock online
+                  chat service.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-[1rem] ">
+              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <div className="flex justify-between flex-col">
+                <p className="text-primary font-semibold">Available Offline</p>
+                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
+                  Access your courses anytime, anywhere, even without an
+                  internet connection.
                 </p>
               </div>
             </div>
@@ -487,23 +494,11 @@ const Home = () => {
               <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
-                  Trusted by Millions
+                  600+ Hours of Classes
                 </p>
                 <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
-                  Join a community of millions who trust us for their learning
-                  journey.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
-              <div className="flex justify-between flex-col">
-                <p className="text-primary font-semibold">
-                  Trusted by Millions
-                </p>
-                <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
-                  Join a community of millions who trust us for their learning
-                  journey.
+                  Dive into over 600 hours of comprehensive classes tailored for
+                  your success.
                 </p>
               </div>
             </div>
