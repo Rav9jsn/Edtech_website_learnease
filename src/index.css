@@ -20,6 +20,17 @@ a.active {
 div ul ul li:hover {
   color: white;
 }
+@layer components {
+  .pt6design {
+    /* padding: 0 1vw; */
+    width: 80px;
+    background-color: #58654d17;
+    color: #afd275;
+    border-radius: 1rem;
+    font-size: 65px;
+  }
+}
+
 /* @theme {
   --color-cake: #2fcf51;
   --spacing-72: 18rem;

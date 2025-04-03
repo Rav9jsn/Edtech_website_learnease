@@ -7,6 +7,11 @@ import pic5 from "../assets/reviewphoto/pic5.jpg";
 import pic6 from "../assets/reviewphoto/pic6.jpeg";
 import grouppic from "../assets/reviewphoto/grouppic.jpg";
 import { CiCircleCheck } from "react-icons/ci";
+import { FaIdCard } from "react-icons/fa";
+import { BsCardChecklist } from "react-icons/bs";
+import { FaRegComment } from "react-icons/fa";
+import { GiPowerButton } from "react-icons/gi";
+import { TfiTimer } from "react-icons/tfi";
 import { FaDraftingCompass } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa";
 import { FaArrowPointer } from "react-icons/fa6";
@@ -39,7 +44,7 @@ const Home = () => {
   const count2 = useMotionValue(0);
   const rounded2 = useTransform(() => Math.round(count2.get()));
   useEffect(() => {
-    const controls = animate(count2, 105, { duration: 1.5 });
+    const controls = animate(count2, 105, { duration: 2 });
     return () => controls.stop();
   }, []);
 
@@ -340,7 +345,7 @@ const Home = () => {
           Explore Course
         </button>
       </div>
-      <div className="flex hidden flex-col">
+      <div className="flex flex-col">
         <div className="flex overflow-hidden px-[4vw] gap-4 fle">
           {data.map((d, i) => (
             <div
@@ -414,27 +419,27 @@ const Home = () => {
       </div>
       {/* part 6 */}
       <div className="tb:px-0 flex-wrap flex  mt-7">
-        <div className="relative hidden md:block overflow-hidden max-w-[40%]">
+        <div className="relative lg:block hidden overflow-hidden max-w-[35%]">
           <img
             src={grouppic}
-            className="transform scale-[1.5]  origin-center  "
+            className="transform lg:scale-[3.6] scale-[10]  origin-center  "
             alt=""
           />
-          <div className="bg-[#2f402151] top-0  bg-cover py-[33%] px-[50%] absolute"></div>
+          <div className="bg-[#2f402151] top-0  bg-cover lg:p-[100%] absolute"></div>
         </div>
-        <div className="md:max-w-[60%] w-[100%]  p-[5rem] bg-secondry flex flex-col gap-[2rem] justify-between ">
+        <div className="lg:max-w-[65%] items-start w-[100%]  sm:p-[5rem] p-[2rem] bg-secondry flex flex-col gap-[2rem] justify-between ">
           <div className="text-center">
-            <span className=" bg-primary  sm:text-[1rem]  text-secondry md:text-left text-center rounded-2xl py-[8px] font-semibold sm:px-[10px]">
+            <span className=" bg-primary   sm:text-[1rem] text-[0.9rem]  text-secondry md:text-left text-center rounded-2xl py-[8px] font-semibold px-[10px]">
               Which Services We Provide
             </span>
           </div>
-          <p className="md:text-[50px] text-[30px] md:leading-15  leading-12 font-semibold text-[#F8F9F5]">
+          <p className="md:text-[50px] sm:text-[30px] text-[20px] md:leading-15 leading-7  sm:leading-12 font-semibold text-[#F8F9F5]">
             Learn More Skills , Be More Competitive
           </p>
           <div className="grid gap-[4rem] lg:grid-cols-2 grid-cols-1">
             <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
-              <div className="flex justify-between flex-col">
+              <IoIosPeople className="pt6design" />
+              <div className="flex  flex-col">
                 <p className="text-primary font-semibold">
                   Trusted by Millions
                 </p>
@@ -445,7 +450,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <FaIdCard className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
                   Certificate Awarded
@@ -457,7 +462,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <BsCardChecklist className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
                   Made by Professionals
@@ -469,7 +474,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <FaRegComment className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
                   24/7 Support & Community
@@ -481,7 +486,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <GiPowerButton className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">Available Offline</p>
                 <p className="text-[#F8F9F5] font-medium text-[1.1rem]">
@@ -491,7 +496,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex gap-[1rem] ">
-              <IoIosPeople className="text-primary px-3 w-[110px] bg-[#58654D]  rounded-2xl text-[80px]" />
+              <TfiTimer className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
                   600+ Hours of Classes
@@ -505,6 +510,59 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* part 7 testimonial */}
+      {/* <div className="px-[4vw] mt-[70px]">
+        <div className=" flex gap-10 ">
+          <div className="flex p-[2rem] w-[50%] flex-col gap-5">
+            <span className="px-[20px] py-[5px] font-semibold rounded-3xl inline-block self-start text-primary bg-secondry">
+              Testimonial
+            </span>
+            <p className="text-7xl font-semibold text-secondry">
+              Our Student Said
+            </p>
+            <p className="text-secondry text-[19px] items-start">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna adipiscing
+              elit.
+            </p>
+          </div>
+          <div className="w-[50%] flex justify-end items-center p-[50px]">
+            <div>
+              {" "}
+              <div className="flex p-[20px]  relative">
+                <img
+                  className="w-17 rounded-full border-[5px] border-white "
+                  src={pic1}
+                  alt=""
+                />
+                <img
+                  className="w-17 rounded-full absolute left-[48px] border-[5px] border-white "
+                  src={pic2}
+                  alt=""
+                />
+                <img
+                  className="w-17 rounded-full absolute left-[96px] border-[5px] border-white "
+                  src={pic3}
+                  alt=""
+                />
+                <img
+                  className="w-17 rounded-full absolute left-[144px] border-[5px] border-white "
+                  src={pic4}
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="flex z-[1000] m-2">
+              <motion.div className="inline-block self-start rounded-tl-2xl rounded-bl-2xl  text-secondry text-3xl font-semibold bg-primary p-1 pr-0">
+                {rounded}
+              </motion.div>
+              <div className="text-secondry text-3xl font-semibold rounded-tr-2xl rounded-br-2xl bg-primary p-0.5">
+                +
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </>
   );
 };
