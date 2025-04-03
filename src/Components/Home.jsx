@@ -5,6 +5,7 @@ import pic3 from "../assets/reviewphoto/pic3.jpeg";
 import pic4 from "../assets/reviewphoto/pic4.jpg";
 import pic5 from "../assets/reviewphoto/pic5.jpg";
 import pic6 from "../assets/reviewphoto/pic6.jpeg";
+import fotterlogo from "../assets/footerlogo.png";
 import grouppic from "../assets/reviewphoto/grouppic.jpg";
 import { CiCircleCheck } from "react-icons/ci";
 import { FaIdCard } from "react-icons/fa";
@@ -28,6 +29,14 @@ import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { IoIosPeople } from "react-icons/io";
 import data from "../assets/index.js";
+import { MdFacebook } from "react-icons/md";
+import { CiTwitter } from "react-icons/ci";
+import { FiYoutube } from "react-icons/fi";
+import { FiInstagram } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
+import { CiMail } from "react-icons/ci";
+import { IoCall } from "react-icons/io5";
 
 const Home = () => {
   const uptonav = () => {
@@ -511,13 +520,13 @@ const Home = () => {
         </div>
       </div>
       {/* part 7 testimonial */}
-      {/* <div className="px-[4vw] mt-[70px]">
-        <div className=" flex gap-10 ">
-          <div className="flex p-[2rem] w-[50%] flex-col gap-5">
+      <div className="px-[4vw] mt-[70px]">
+        <div className=" flex lg:flex-row flex-col lg:gap-10 ">
+          <div className="flex p-[2rem] lg:w-[50%] flex-col gap-5">
             <span className="px-[20px] py-[5px] font-semibold rounded-3xl inline-block self-start text-primary bg-secondry">
               Testimonial
             </span>
-            <p className="text-7xl font-semibold text-secondry">
+            <p className="sm:text-7xl text-5xl font-semibold text-secondry">
               Our Student Said
             </p>
             <p className="text-secondry text-[19px] items-start">
@@ -526,10 +535,10 @@ const Home = () => {
               elit.
             </p>
           </div>
-          <div className="w-[50%] flex justify-end items-center p-[50px]">
+          <div className="w-[50%] sm:flex hidden justify-end items-center lg:p-[50px]">
             <div>
               {" "}
-              <div className="flex p-[20px]  relative">
+              <div className="flex mr-[125px]  relative">
                 <img
                   className="w-17 rounded-full border-[5px] border-white "
                   src={pic1}
@@ -552,7 +561,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="flex z-[1000] m-2">
+            <div className="flex p-[5px] z-[1000] m-2">
               <motion.div className="inline-block self-start rounded-tl-2xl rounded-bl-2xl  text-secondry text-3xl font-semibold bg-primary p-1 pr-0">
                 {rounded}
               </motion.div>
@@ -562,7 +571,114 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      {/* Footter */}
+      <div className="bg-secondry  px-[4vw]">
+        <div className="flex  py-[50px] justify-between">
+          <div className="flex gap-3   flex-col">
+            <img className="w-[20rem]" src={fotterlogo} alt="" />
+            <p className="text-[1.1rem] text-[#d5decd]">
+              {" "}
+              Empowering learners through innovative digital education.
+            </p>
+          </div>
+          <div className="flex text-white text-3xl justify-center items-center gap-3.5">
+            <MdFacebook />
+            <CiTwitter />
+            <FiYoutube />
+            <FiInstagram />
+            <FaLinkedin />
+          </div>
+        </div>
+        <hr className="text-primary" />
+        <div className="my-10 w-[100%] justify-between flex">
+          {/* left */}
+          <div className="flex w-[50%] justify-between ">
+            {/* 1st col */}
+            <div className="flex text-primary gap-[0.6rem] flex-col">
+              <p className="text-[1.1rem] font-semibold">Our Address</p>
+              <div className="flex  gap-3.5">
+                <FaLocationDot className="text-[24px]" />
+                <p className="text-white hover:text-primary text-[15.5px]">
+                  {" "}
+                  123 Address New York, USA
+                </p>
+              </div>
+              <div className="flex  gap-3.5">
+                <CiMail className="text-[24px]" />
+                <p className="text-white hover:text-primary text-[15.5px]">
+                  hello@LearnEase.com
+                </p>
+              </div>
+              <div className="flex  gap-3.5">
+                <IoCall className="text-[24px]" />
+                <p className="text-white hover:text-primary text-[15.5px]">
+                  +1 234 567 890
+                </p>
+              </div>
+            </div>
+            {/* 2nd col */}
+            <div className="flex gap-[0.6rem] flex-col">
+              <p className="font-bold text-[1.1rem] text-primary">
+                Quick Links
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">Home</p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                About Us
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Courses
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">FAQ</p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Contact
+              </p>
+            </div>
+            {/* 3rd col */}
+            <div className="flex gap-[0.6rem] flex-col">
+              <p className="font-bold text-[1.1rem] text-primary">
+                Courses Category
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Business Management
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Programming
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Creative Arts
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Digital Strategy
+              </p>
+              <p className="text-white text-[16px]  hover:text-primary">
+                Contact
+              </p>
+            </div>
+          </div>
+          {/* right */}
+          <div className="flex pl-[16vw] gap-[1.5rem] w-[45%] flex-col">
+            <p className="text-4xl font-medium text-primary">
+              Join our newsletter to keep up to date with us!
+            </p>
+            <div className="flex p-2 rounded-4xl justify-between bg-white">
+              <input
+                className="w-[15rem]  px-[1rem] py-[0.3rem] outline-0 focus:border-2 focus:border-green-100  rounded-2xl"
+                type="text"
+                placeholder="Email"
+              />
+              <p className="text-white hover:bg-secondry duration-400 bg-primary px-[15px] py-2  rounded-4xl text-[1.2rem]">
+                Subscribe
+              </p>
+            </div>
+            <p className="text-white">
+              Get the latest news about our updates and discounts
+            </p>
+          </div>
+        </div>
+        <hr className="text-primary" />
+        <div className="mt-52">hi</div>
+      </div>
     </>
   );
 };
