@@ -591,9 +591,9 @@ const Home = () => {
           </div>
         </div>
         <hr className="text-primary" />
-        <div className="my-10 w-[100%] justify-between flex">
+        <div className="my-10 w-[100%] flex-wrap  justify-between md:flex">
           {/* left */}
-          <div className="flex w-[50%] justify-between ">
+          <div className="flex md:w-[55%] sm:flex-row flex-col gap-2 sm:justify-between ">
             {/* 1st col */}
             <div className="flex text-primary gap-[0.6rem] flex-col">
               <p className="text-[1.1rem] font-semibold">Our Address</p>
@@ -657,17 +657,17 @@ const Home = () => {
             </div>
           </div>
           {/* right */}
-          <div className="flex pl-[16vw] gap-[1.5rem] w-[45%] flex-col">
-            <p className="text-4xl font-medium text-primary">
+          <div className="flex items-center  gap-[1.5rem] lg:w-[35%] md:w-[45%] flex-col">
+            <p className="text-4xl mt-5 md:mt-0 md:px-0   sm:px-20 text-center md:text-left font-medium text-primary">
               Join our newsletter to keep up to date with us!
             </p>
-            <div className="flex p-2 rounded-4xl justify-between bg-white">
+            <div className="flex p-[0.5vw]  rounded-4xl justify-between bg-white">
               <input
-                className="w-[15rem]  px-[1rem] py-[0.3rem] outline-0 focus:border-2 focus:border-green-100  rounded-2xl"
+                className="  px-[1vw] py-[0.3rem] outline-0 focus:border-2 focus:border-green-100  rounded-2xl"
                 type="text"
                 placeholder="Email"
               />
-              <p className="text-white hover:bg-secondry duration-400 bg-primary px-[15px] py-2  rounded-4xl text-[1.2rem]">
+              <p className="text-white hover:bg-secondry duration-400 bg-primary px-[1vw] py-2  rounded-4xl text-[1.2rem]">
                 Subscribe
               </p>
             </div>
@@ -677,7 +677,19 @@ const Home = () => {
           </div>
         </div>
         <hr className="text-primary" />
-        <div className="mt-52">hi</div>
+        <div className="py-5 text-white md:gap-[2.5vw] text-center font-medium flex flex-wrap  justify-center md:justify-between">
+          {/* left */}
+          <div> Copyright &copy; 2024 LearnEase | Powered by Alfatheme</div>
+          {/* Right */}
+          <div className="font-medium text-white flex gap-[1vw] md:gap-[1.8vw]">
+            <div>Privayc Policy</div>
+            <div className="md:block hidden">|</div>
+            <div>Term Conditions</div>
+            <div className="md:block hidden">|</div>
+
+            <div>Cookies</div>
+          </div>
+        </div>
       </div>
     </>
   );
