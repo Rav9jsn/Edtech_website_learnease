@@ -73,6 +73,7 @@ const Home = () => {
 
   return (
     <>
+      {/* unloack future Section */}
       <div className=" overflow-x-hidden backdrop-blur-2xl bg-[url('https://theme.vividusmockup.com/learnease/wp-content/uploads/sites/3/2024/10/bg.png')] bg-cover relative sm:gap-[3rem] gap-[3rem]  text-white  flex flex-col sm:flex-row   px-[4vw] lg:mt-[100px] w-[100%]">
         <div className="flex flex-col justify-start gap-[1.8rem] w-[100%] sm:max-w-[48%]">
           <div className="flex flex-col text-[#2F4021] sm:font-[700] font-[900] md:text-[70px] sm:text-[50px] text-[45px] md:leading-20 sm:leading-15 leading-10 ">
@@ -208,6 +209,7 @@ const Home = () => {
           </div>
         </div>{" "}
       </div>
+      {/* top Catrgories */}
       <div className="px-[4vw] sm:pt-36 pt-14 w-[100%]">
         <div className="flex items-center  gap-[1rem] flex-col">
           <p className="bg-secondry  text-center font-semibold py-[3px] w-[10rem] rounded-2xl text-primary">
@@ -292,6 +294,7 @@ const Home = () => {
           </p>
         </div>
       </div>
+      {/* How it works section */}
       <div className="px-[4vw] bg-[#2f4021f6] flex flex-col mt-10 gap-[1rem] py-[10vh] items-center  bg-[url('https://theme.vividusmockup.com/learnease/wp-content/uploads/sites/3/2024/10/bg.png')] ">
         <p className="text-center px-2 py-[3px] w-[8.3rem] rounded-2xl text-secondry bg-primary font-semibold">
           How It Works
@@ -304,7 +307,13 @@ const Home = () => {
           and professional growth.
         </p>
         <div className=" sm:py-[10vh] w-[80vw] lg:flex-nowrap flex-wrap flex gap-7 ">
-          <div className="flex p-[30px] gap-[0.5rem] rounded-2xl  border-dotted border-primary border-[2px] flex-col">
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -200 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex p-[30px] gap-[0.5rem] rounded-2xl  border-dotted border-primary border-[2px] flex-col"
+          >
             <div className="pb-3  flex  justify-between">
               <p className=" text-6xl text-primary  font-semibold">01</p>
               <IoPersonSharp className="text-secondry bg-primary text-6xl p-3 rounded-lg" />
@@ -314,8 +323,14 @@ const Home = () => {
               Create an account in minutes by providing your details and
               accessing the student dashboard.
             </p>
-          </div>
-          <div className="flex p-[30px] lg:relative st:w-[100%] tb:w-[70%] lg:w-[95%] lg:top-[6rem] gap-[0.5rem] rounded-2xl border-dotted border-primary border-[2px] flex-col">
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 200 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex p-[30px] lg:relative st:w-[100%] tb:w-[70%] lg:w-[95%] lg:top-[6rem] gap-[0.5rem] rounded-2xl border-dotted border-primary border-[2px] flex-col"
+          >
             <div className="pb-3 flex  justify-between">
               <p className=" text-6xl text-primary  font-semibold">02</p>
               <FaArrowPointer className="text-secondry bg-primary text-6xl p-3 rounded-lg" />
@@ -327,8 +342,14 @@ const Home = () => {
               Browse our wide range of courses, choose your preferred subject,
               and enroll instantly.
             </p>
-          </div>
-          <div className="flex p-[30px] gap-[0.5rem] rounded-2xl border-dotted border-primary border-[2px] flex-col">
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 400 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex p-[30px] gap-[0.5rem] rounded-2xl border-dotted border-primary border-[2px] flex-col"
+          >
             <div className="pb-3 flex  justify-between">
               <p className=" text-6xl text-primary  font-semibold">03</p>
               <FaCheck className="text-secondry bg-primary text-6xl p-3 rounded-lg" />
@@ -340,9 +361,10 @@ const Home = () => {
               Access course materials, join interactive lessons, and complete
               assignments at your own pace.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
+      {/* Popular course Sectino  */}
       <div className="flex gap-[1rem] my-[5rem] items-center flex-col px-[4vw]">
         <p className="md:text-6xl text-4xl text-center font-bold text-secondry">
           Our Popular Courses
@@ -354,8 +376,8 @@ const Home = () => {
           Explore Course
         </button>
       </div>
-      <div className="flex flex-col">
-        <div className="flex overflow-hidden px-[4vw] gap-4 fle">
+      <div>
+        <div className="flex overflow-hidden px-[4vw] gap-4">
           {data.map((d, i) => (
             <div
               className="flex flex-col p-[18px] bg-gradient-to-r from-stone-100 to-lime-50  gap-[1rem] border-[1px] rounded-2xl border-primary hover:border-black duration-500 "
@@ -390,7 +412,7 @@ const Home = () => {
                 </p>
                 <p
                   onClick={() => uptonav()}
-                  className="cursor-pointer bg-primary text-[#F8F9F5] rounded-4xl px-[15px] py-2"
+                  className="cursor-pointer hover:bg-red-400 duration-300 bg-primary text-[#F8F9F5] rounded-4xl px-[15px] py-2"
                 >
                   View Course
                 </p>
@@ -399,34 +421,16 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="flex px-[4vw] py-7 justify-center gap-[1rem]  ">
-          <input
-            type="radio"
-            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
-          ></input>
-          <input
-            type="radio"
-            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
-          ></input>
-          <input
-            type="radio"
-            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
-          ></input>
-          <input
-            type="radio"
-            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
-          ></input>
-          <input
-            type="radio"
-            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
-          ></input>
-          <input
-            type="radio"
-            className="focus:bg-secondry text-primary border-primary border-[1px] p-1 rounded-full"
-          ></input>
+        <div className=" px-[4vw] my-7 gap-5 cursor-pointer  flex justify-center">
+          {data.map((s, i) => (
+            <div
+              key={i}
+              className="h-2 w-2 bg-black hover:bg-primary rounded-full"
+            ></div>
+          ))}
         </div>
       </div>
-      {/* part 6 */}
+      {/* Service provided Section */}
       <div className="tb:px-0 flex-wrap flex  mt-7">
         <div className="relative lg:block hidden overflow-hidden max-w-[35%]">
           <img
@@ -442,11 +446,23 @@ const Home = () => {
               Which Services We Provide
             </span>
           </div>
-          <p className="md:text-[50px] sm:text-[30px] text-[20px] md:leading-15 leading-7  sm:leading-12 font-semibold text-[#F8F9F5]">
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -200 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="md:text-[50px] sm:text-[30px] text-[20px] md:leading-15 leading-7  sm:leading-12 font-semibold text-[#F8F9F5]"
+          >
             Learn More Skills , Be More Competitive
-          </p>
+          </motion.p>
           <div className="grid gap-[4rem] lg:grid-cols-2 grid-cols-1">
-            <div className="flex gap-[1rem] ">
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex gap-[1rem] "
+            >
               <IoIosPeople className="pt6design" />
               <div className="flex  flex-col">
                 <p className="text-primary font-semibold">
@@ -457,8 +473,14 @@ const Home = () => {
                   journey.
                 </p>
               </div>
-            </div>
-            <div className="flex gap-[1rem] ">
+            </motion.div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex gap-[1rem] "
+            >
               <FaIdCard className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
@@ -469,8 +491,14 @@ const Home = () => {
                   career prospects.
                 </p>
               </div>
-            </div>
-            <div className="flex gap-[1rem] ">
+            </motion.div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex gap-[1rem] "
+            >
               <BsCardChecklist className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
@@ -481,8 +509,14 @@ const Home = () => {
                   high-quality educational content.
                 </p>
               </div>
-            </div>
-            <div className="flex gap-[1rem] ">
+            </motion.div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex gap-[1rem] "
+            >
               <FaRegComment className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
@@ -493,8 +527,14 @@ const Home = () => {
                   chat service.
                 </p>
               </div>
-            </div>
-            <div className="flex gap-[1rem] ">
+            </motion.div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex gap-[1rem] "
+            >
               <GiPowerButton className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">Available Offline</p>
@@ -503,8 +543,14 @@ const Home = () => {
                   internet connection.
                 </p>
               </div>
-            </div>
-            <div className="flex gap-[1rem] ">
+            </motion.div>
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex gap-[1rem] "
+            >
               <TfiTimer className="pt6design" />
               <div className="flex justify-between flex-col">
                 <p className="text-primary font-semibold">
@@ -515,11 +561,11 @@ const Home = () => {
                   your success.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-      {/* part 7 testimonial */}
+      {/* testimonial section */}
       <div className="px-[4vw] mt-[70px]">
         <div className=" flex lg:flex-row flex-col lg:gap-10 ">
           <div className="flex p-[2rem] lg:w-[50%] flex-col gap-5">
@@ -582,12 +628,12 @@ const Home = () => {
               Empowering learners through innovative digital education.
             </p>
           </div>
-          <div className="flex text-white text-3xl justify-center items-center gap-3.5">
-            <MdFacebook />
-            <CiTwitter />
-            <FiYoutube />
-            <FiInstagram />
-            <FaLinkedin />
+          <div className="flex text-white  text-3xl justify-center items-center gap-3.5">
+            <MdFacebook className="hover:text-primary" />
+            <CiTwitter className="hover:text-primary" />
+            <FiYoutube className="hover:text-primary" />
+            <FiInstagram className="hover:text-primary" />
+            <FaLinkedin className="hover:text-primary" />
           </div>
         </div>
         <hr className="text-primary" />

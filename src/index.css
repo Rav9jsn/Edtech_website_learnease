@@ -30,17 +30,3 @@ div ul ul li:hover {
     font-size: 65px;
   }
 }
-
-/* @theme {
-  --color-cake: #2fcf51;
-  --spacing-72: 18rem;
-  --font-primary: "Inter", sans-serif;
-}
-@layer components {
-  .card {
-    background-color: var(--color-yellow-200);
-    border-radius: var(--rounded-lg);
-    padding: var(--spacing-6);
-    box-shadow: var(--shadow-2xs);
-  }
-} */
