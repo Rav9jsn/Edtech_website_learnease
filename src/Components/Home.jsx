@@ -37,6 +37,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 import { IoCall } from "react-icons/io5";
+import { useState } from "react";
 
 const Home = () => {
   const uptonav = () => {
@@ -70,6 +71,8 @@ const Home = () => {
     const controls = animate(count4, 347, { duration: 1.5 });
     return () => controls.stop();
   }, []);
+
+  const [current, setCurrent] = useState(0);
 
   return (
     <>
@@ -376,8 +379,11 @@ const Home = () => {
           Explore Course
         </button>
       </div>
-      <div>
-        <div className="flex overflow-hidden px-[4vw] gap-4">
+      <div className="overflow-hidden">
+        <div
+          className="transition ease-out duration-500  md:flex px-[4vw] gap-4 "
+          style={{ transform: `translateX(-${current * 24}%` }}
+        >
           {data.map((d, i) => (
             <div
               className="flex flex-col p-[18px] bg-gradient-to-r from-stone-100 to-lime-50  gap-[1rem] border-[1px] rounded-2xl border-primary hover:border-black duration-500 "
@@ -421,11 +427,14 @@ const Home = () => {
           ))}
         </div>
 
-        <div className=" px-[4vw] my-7 gap-5 cursor-pointer  flex justify-center">
+        <div className=" px-[4vw] md:flex my-7 gap-5 cursor-pointer  flex justify-center">
           {data.map((s, i) => (
             <div
               key={i}
-              className="h-2 w-2 bg-black hover:bg-primary rounded-full"
+              onClick={() => setCurrent(i)}
+              className={` h-2 w-2 bg-black hover:bg-primary rounded-full ${
+                current === i ? "bg-black" : "bg-gray-500"
+              } `}
             ></div>
           ))}
         </div>
@@ -566,7 +575,7 @@ const Home = () => {
         </div>
       </div>
       {/* testimonial section */}
-      <div className="px-[4vw] mt-[70px]">
+      <div className="px-[4vw] md:block hidden mt-[70px]">
         <div className=" flex lg:flex-row flex-col lg:gap-10 ">
           <div className="flex p-[2rem] lg:w-[50%] flex-col gap-5">
             <span className="px-[20px] py-[5px] font-semibold rounded-3xl inline-block self-start text-primary bg-secondry">
