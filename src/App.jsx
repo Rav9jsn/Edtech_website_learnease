@@ -8,6 +8,7 @@ import News from "./Components/News";
 import ContactUs from "./Components/ContactUs";
 import Coursescatalog from "./Components/Coursescatalog";
 import CourseDetails from "./Components/CourseDetails";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/Coursescatalog" element={<Coursescatalog />} />
         <Route path="/Coursedetails" element={<CourseDetails />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
