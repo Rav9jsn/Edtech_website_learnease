@@ -1,4 +1,4 @@
- E-Learning Platform – Unlock Your Future with Online Learning
+🚀 E-Learning Platform – Unlock Your Future with Online Learning
 An innovative e-learning platform offering expert-led courses, interactive lessons, and personalized learning experiences to help users grow and succeed—anytime, anywhere.
 
 ✨ Features
